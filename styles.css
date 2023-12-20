@@ -39,7 +39,7 @@ body {
   border-bottom-right-radius: 80px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
 }
 
 .birth-date {
