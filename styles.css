@@ -1,0 +1,169 @@
+:root {
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+  --purple: hsl(259, 100%, 65%);
+  --ight-red: hsl(0, 100%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  display: none;
+  margin: 0;
+}
+
+input::placeholder {
+  color: var(--smokey-grey);
+}
+
+body {
+  font-family: "Poppins";
+  background-color: var(--light-grey);
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  padding: 60px 20px;
+  border-radius: 25px;
+  border-bottom-right-radius: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.birth-date {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.birth-date__input-div {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+}
+
+.birth-date__input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3px;
+
+  & label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--smokey-grey);
+    letter-spacing: 2px;
+  }
+
+  & input {
+    width: 75px;
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.birth-date__divider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .hr {
+    border-top: 1px solid var(--light-grey);
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+  }
+}
+
+.birth-date__icon-div {
+  z-index: 1;
+  align-self: center;
+  background-color: var(--purple);
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 20px;
+  }
+}
+
+.age-result {
+  line-height: 55px;
+  font-style: italic;
+}
+
+.age-result__text {
+  font-size: 3.2rem;
+  font-weight: 800;
+
+  span {
+    color: var(--purple);
+    font-size: 1.1em;
+    font-weight: 800;
+    margin-right: 7px;
+  }
+}
+
+@media (min-width: 400px) {
+  .container {
+    padding: 35px;
+    gap: 0px;
+    border-radius: 15px;
+    border-bottom-right-radius: 150px;
+    flex-grow: 0.11;
+  }
+
+  .birth-date {
+    gap: 0px;
+  }
+
+  .birth-date__input {
+    & input {
+      border-radius: 7px;
+      width: 107px;
+      padding: 8px 15px;
+      font-size: 22px;
+    }
+  }
+
+  .birth-date__icon-div {
+    align-self: flex-end;
+
+    & img {
+      width: 35px;
+    }
+  }
+
+  .age-result {
+    line-height: 75px;
+
+    .age-result__text {
+      font-size: 4.5rem;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="birth-date">
+        <div class="birth-date__input-div">
+          <div class="birth-date__input">
+            <label for="day">DAY</label>
+            <input type="number" id="day" placeholder="DD" />
+          </div>
+
+          <div class="birth-date__input">
+            <label for="month">MONTH</label>
+            <input type="number" id="month" placeholder="MM" />
+          </div>
+
+          <div class="birth-date__input">
+            <label for="year">YEAR</label>
+            <input type="number" id="year" placeholder="YYYY" />
+          </div>
+        </div>
+
+        <div class="birth-date__divider">
+          <div class="hr"></div>
+          <div class="birth-date__icon-div">
+            <img class="birth-date__arrow-icon" src="images/icon-arrow.svg" alt="arrow icon" />
+          </div>
+        </div>
+      </section>
+
+      <section class="age-result">
+        <p class="age-result__text"><span>--</span>years</p>
+        <p class="age-result__text"><span>--</span>months</p>
+        <p class="age-result__text"><span>--</span>days</p>
+      </section>
+    </main>
+  </body>
+</html>
