@@ -9,28 +9,32 @@
   <body>
     <main class="container">
       <section class="birth-date">
-        <div class="birth-date__input-div">
+        <div class="birth-date__input-div" id="error">
           <div class="birth-date__input">
             <label for="day">DAY</label>
             <input type="number" id="day" placeholder="DD" />
+            <p class="error-text"></p>
           </div>
 
           <div class="birth-date__input">
             <label for="month">MONTH</label>
             <input type="number" id="month" placeholder="MM" />
+            <p class="error-text"></p>
           </div>
 
           <div class="birth-date__input">
             <label for="year">YEAR</label>
             <input type="number" id="year" placeholder="YYYY" />
+            <p class="error-text"></p>
           </div>
         </div>
 
         <div class="birth-date__divider">
           <div class="hr"></div>
-          <div class="birth-date__icon-div">
+
+          <button class="birth-date__button">
             <img class="birth-date__arrow-icon" src="images/icon-arrow.svg" alt="arrow icon" />
-          </div>
+          </button>
         </div>
       </section>
 
@@ -40,5 +44,6 @@
         <p class="age-result__text"><span>--</span>days</p>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

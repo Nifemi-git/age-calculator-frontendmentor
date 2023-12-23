@@ -56,6 +56,7 @@ body {
 }
 
 .birth-date__input {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -78,6 +79,35 @@ body {
     font-size: 20px;
     font-weight: 700;
   }
+
+  & input:hover,
+  input:focus {
+    cursor: pointer;
+    border-color: var(--purple);
+  }
+
+  & p {
+    display: none;
+    position: absolute;
+    bottom: -30px;
+  }
+}
+
+.error-div {
+  & label {
+    color: var(--ight-red);
+  }
+
+  & input {
+    border: 1px solid var(--ight-red);
+  }
+
+  & p {
+    display: block;
+    font-size: 9.4px;
+    color: var(--ight-red);
+    font-style: oblique;
+  }
 }
 
 .birth-date__divider {
@@ -97,11 +127,12 @@ body {
   }
 }
 
-.birth-date__icon-div {
+.birth-date__button {
   z-index: 1;
   align-self: center;
   background-color: var(--purple);
   padding: 15px;
+  border: none;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -110,6 +141,15 @@ body {
   & img {
     width: 20px;
   }
+}
+
+.birth-date__button:hover {
+  cursor: pointer;
+  background-color: var(--off-black);
+}
+
+.birth-date__button:active {
+  opacity: 0.8;
 }
 
 .age-result {
@@ -129,6 +169,7 @@ body {
   }
 }
 
+/*Desktop view */
 @media (min-width: 400px) {
   .container {
     padding: 35px;
@@ -149,9 +190,13 @@ body {
       padding: 8px 15px;
       font-size: 22px;
     }
+
+    & p {
+      bottom: -20px;
+    }
   }
 
-  .birth-date__icon-div {
+  .birth-date__button {
     align-self: flex-end;
 
     & img {
